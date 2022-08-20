@@ -81,32 +81,33 @@ body {
   transform: scale(0.95);
 }
 
-.item:nth-child(1) a,
-.item:nth-child(1)::before,
-.item:nth-child(1)::after {
+.fb a,
+.fb::before,
+.fb::after {
   background: #667db6;
 }
 
-.item:nth-child(2) a,
-.item:nth-child(2)::before,
-.item:nth-child(2)::after {
+.insta a,
+.insta::before,
+.insta::after {
   background: #ff0099;
 }
-.item:nth-child(3) a,
-.item:nth-child(3)::before,
-.item:nth-child(3)::after {
+
+.twitter a,
+.twitter::before,
+.twitter::after {
   background: #0082c8;
 }
 
-.item:nth-child(4) a,
-.item:nth-child(4)::before,
-.item:nth-child(4)::after {
+.snapchat a,
+.snapchat::before,
+.snapchat::after {
   background: #f7ff00;
 }
 
 .item:hover::before,
 .item:hover::after {
-  opacity: 0.377;
+  opacity: 0.3777;
 }
 
 .item:hover i {
@@ -115,7 +116,6 @@ body {
 
 .fb:hover ~ .bg {
   background: linear-gradient(120deg, #3b5998, #0082c8);
-  transition: background 2s ease;
 }
 
 .insta:hover ~ .bg {
@@ -134,5 +134,5 @@ body {
 }
 
 .snapchat:hover ~ .bg {
-  background: linear-gradient(120deg, #fffc00, #ffff);
+  background: linear-gradient(120deg, #fffc00, #fff);
 }
