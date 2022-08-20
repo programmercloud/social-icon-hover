@@ -1,0 +1,138 @@
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  background: #fff;
+  padding: 10px 25px;
+  border-radius: 50px;
+  box-shadow: 3px 15px 11px rgba(0, 0, 0, 0.2);
+}
+
+.bg {
+  background: linear-gradient(to bottom, #7f00ff, #e100ff);
+  width: 100vw;
+  height: 100vh;
+  z-index: -1000;
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.item {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.item::before,
+.item::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  border-radius: 50%;
+  filter: blur(10px);
+  opacity: 0;
+  transition: 1s;
+}
+
+.item::after {
+  filter: blur(60px);
+}
+
+.item a {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  bottom: 10px;
+  left: 10px;
+  line-height: 80px;
+  text-align: center;
+  color: #fff;
+  font-size: 36px;
+  background: #000;
+  border-radius: 50%;
+}
+
+.item a i {
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: 0.5s;
+  transform: scale(0.95);
+}
+
+.item:nth-child(1) a,
+.item:nth-child(1)::before,
+.item:nth-child(1)::after {
+  background: #667db6;
+}
+
+.item:nth-child(2) a,
+.item:nth-child(2)::before,
+.item:nth-child(2)::after {
+  background: #ff0099;
+}
+.item:nth-child(3) a,
+.item:nth-child(3)::before,
+.item:nth-child(3)::after {
+  background: #0082c8;
+}
+
+.item:nth-child(4) a,
+.item:nth-child(4)::before,
+.item:nth-child(4)::after {
+  background: #f7ff00;
+}
+
+.item:hover::before,
+.item:hover::after {
+  opacity: 0.377;
+}
+
+.item:hover i {
+  transform: scale(1.1);
+}
+
+.fb:hover ~ .bg {
+  background: linear-gradient(120deg, #3b5998, #0082c8);
+  transition: background 2s ease;
+}
+
+.insta:hover ~ .bg {
+  background: linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+}
+
+.twitter:hover ~ .bg {
+  background: linear-gradient(45deg, #66757f, #00acee, #36d8ff, #f5f8fa);
+}
+
+.snapchat:hover ~ .bg {
+  background: linear-gradient(120deg, #fffc00, #ffff);
+}
